@@ -10,6 +10,7 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -135,20 +136,36 @@ public class MainActivity extends AppCompatActivity  implements GoogleApiClient.
     public void Emer(View v) {
         HashMap<String, String> user = session.getUserDetails();
 
-        String number1 = user.get(SessionManager.CONTACT1);
+        final String number1 = user.get(SessionManager.CONTACT1);
         // name
-        String number2 = user.get(SessionManager.CONTACT2);
+        final String number2 = user.get(SessionManager.CONTACT2);
 
         // email
-        String number3 = user.get(SessionManager.CONTACT3);
+        final String number3 = user.get(SessionManager.CONTACT3);
         sm = SmsManager.getDefault();
+        final Handler handler = new Handler();
+        final int delay = 10000; // 1000 milliseconds == 1 second
+
+
 
         if (number1 !=null) {
-
             sm.sendTextMessage(number1, null, "I'm in danger..My current location is http://maps.google.com/?q=" + location, null, null);
             sm.sendTextMessage(number2, null, "I'm in danger..My current location is http://maps.google.com/?q=" + location, null, null);
             sm.sendTextMessage(number3, null, "I'm in danger..My current location is http://maps.google.com/?q=" + location, null, null);
-Toast.makeText(getApplicationContext(),"message sent",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"message sent",Toast.LENGTH_SHORT).show();// Do your work here
+
+            handler.postDelayed(new Runnable() {
+                public void run() {
+                    System.out.println("myHandler: here!");
+                    sm.sendTextMessage(number1, null, "I'm in danger..My current location is http://maps.google.com/?q=" + location, null, null);
+                    sm.sendTextMessage(number2, null, "I'm in danger..My current location is http://maps.google.com/?q=" + location, null, null);
+                    sm.sendTextMessage(number3, null, "I'm in danger..My current location is http://maps.google.com/?q=" + location, null, null);
+                    Toast.makeText(getApplicationContext(),"message sent",Toast.LENGTH_SHORT).show();// Do your work here
+                    handler.postDelayed(this, delay);
+                }
+            }, delay);
+
+
         } else {
 
             Intent i = new Intent(this, People.class);

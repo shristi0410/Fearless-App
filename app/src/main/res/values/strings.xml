@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CareVault</string>
+    <string name="app_name">Fearless</string>
     <string name="title_activity_navigation_alert">Alert</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -49,8 +49,8 @@ So by this application anonymously without hesitation person can lodge their com
     <string name="alertinfo">It is a personal safety app designed to keep you and your friends safer 24/7. It’s packed with features for both everyday safety and real emergencies, making it the ultimate safety tool for you and everyone you love.</string>
 
 <string name="aboutus"> Fearless has been created out of the growing concern for Public Safety. Everyday newspapers and news channels are filled with articles of kidnappings, rapes and murders. And these are just the accounted ones. The need for preventive measures is of the utmost importance, both at a public level as well as at a personal level.
- \nThis is where we step in. Fearless aims to make you feel safer and secure while you, your kids, family and close ones are out in public, away from the safety of their own home. CareVault is targeted at women, teens and children who have to travel between lonely areas, have to use public transport and have to be in any such circumstances where they may be vulnerable to harm. Concern for the safety of loved ones is something we understand and take very seriously, and we express this concern in the form of a revolutionary application which only has to be installed on your regular Android based smartphone
-   \nIn case of an emergency Fearless-Alert immediately sends out alerts to all the listed contacts with the GPS coordinates of the phone via SMS and CareVault-Complaint sends out the complaint to the NGO/Concerned Authority via Email.</string>
+ \nThis is where we step in. Fearless aims to make you feel safer and secure while you, your kids, family and close ones are out in public, away from the safety of their own home.Fearless is targeted at women, teens and children who have to travel between lonely areas, have to use public transport and have to be in any such circumstances where they may be vulnerable to harm. Concern for the safety of loved ones is something we understand and take very seriously, and we express this concern in the form of a revolutionary application which only has to be installed on your regular Android based smartphone
+   \nIn case of an emergency Fearless-Alert immediately sends out alerts to all the listed contacts with the GPS coordinates of the phone via SMS and Fearless-Complaint sends out the complaint to the NGO/Concerned Authority via Email.</string>
 <string name="complainthome">Complaint Management System provides an online way of solving problems faced by public anonymously and helping the society be a better and safe place to live.\nAdmin will not reveal your identity but will have your email info
 </string>
     <string name="attach">Attach</string>
